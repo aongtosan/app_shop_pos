@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/item")
 public class ItemController {
     private final Logger logger = LogManager.getLogger(ItemController.class);
-    @GetMapping(path = "/{documentName}", produces = "application/json")
+    @GetMapping(path = "/{itemId}", produces = "application/json")
     public String findDocument(@PathVariable(required=false,name="itemId") String itemId){
         logger.info("METHOD:GET endpoint => /item/"+itemId);
         return "Here your item id : "+itemId;
